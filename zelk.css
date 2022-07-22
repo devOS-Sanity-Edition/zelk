@@ -4,47 +4,38 @@
 /*--------------IMPORTS------------- */
 @import url(https://schnensch0.github.io/zelk/main.css);
 @import url(https://crearts-community.github.io/Settings-Icons/clients/powercord.css);
-/*--------------COLORS---------------*/
-/*------remove / and * to apply------*/
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/blue.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/green.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/gray.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/orange.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/purple.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/red.css); */
-/* @import url(https://raw.githack.com/schnensch0/zelk/main/colors/discord.css); */
 /*-------------VARIABLES-------------*/
 :root {
   /* set to 'unset' to show */
-  --scrollbars: none;
+  --scrollbars: unset;
   /* user notes */
-  --notes: none;
+  --notes: show;
   /* direct message box */
-  --message: none;
+  --message: show;
   /* set to '4px solid' to show */
-  --embed-color: none;
+  --embed-color: 4px solid;
   /* set to 'Inter', sans-serif !important to use Inter font*/
   --font-primary: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --font-display: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-  --border-radius-1: 10px;
-  --border-radius-2: 8px;
+  --font-display: 'Google Sans', sans-serif !important;
+  --border-radius-1: 8px;
+  --border-radius-2: 15px;
 }
 /*-----------CUSTOM COLORS-----------*/
 /*-------------DARK MODE-------------*/
 /*---------------BASIC---------------*/
 .theme-dark {
-  --accent-color: #bde6fb;
-  --background-1: #171d20;
-  --background-2: #1e2529;
-  --background-accent: #1e2529;
-  --border-color: #273034;
+  --accent-color: #9400a8;
+  --background-1: #211f22;
+  --background-2: #2c2430;
+  --background-accent: #2d262e;
+  --border-color: #9a3bec;
 }
 /*-------------LIGHT MODE------------*/
 .theme-light {
-  --accent-color: #22c5fd;
+  --accent-color: #00a86b;
   --background-1: #ffffff;
   --background-2: #f5f7fa;
-  --background-accent: var(--background-2);
+  --background-accent: var(--accent-color);
   --border-color: transparent;
 }
 /*-------------ADVANCED--------------*/
@@ -57,24 +48,24 @@
   --background-tertiary: var(--background-2);
   --background-accent-gradient: var(--background-2);
   --background-floating: var(--background-1);
-  --background-mentioned: #bde6fb10;
-  --background-mentioned-hover: #bde6fb15;
+  --background-mentioned: #a800a010;
+  --background-mentioned-hover: #a800a020;
   /* modifiers */
   --background-modifier-hover: #262e33;
   --background-modifier-active: #495a63;
   --background-modifier-selected: var(--accent-color);
   --background-modifier-accent: transparent;
-  --background-message-hover: transparent;
+  --background-message-hover: #a800a010;
   /* text */
-  --text-normal: var(--accent-color);
+  --text-normal: #ffffff;
   --text-positive: var(--text-normal);
-  --text-muted: #6d8692;
-  --text-link: #edf8fe;
-  --interactive-selected: var(--background-primary);
-  --interactive-active: var(--text-normal);
+  --text-muted: #a1a1a1;
+  --text-link: #289cda;
+  --interactive-selected: #ffffff;
+  --interactive-active: #ffffff;
   --interactive-normal: var(--text-normal);
   --interactive-muted: var(--button-background-active);
-  --channels-default: var(--text-muted);
+  --channels-default: #967699;
   --header-primary: var(--text-normal);
   --header-secondary: var(--text-muted);
   /* more */
@@ -105,28 +96,28 @@
   --background-tertiary: var(--background-2);
   --background-accent-gradient: var(--background-2);
   --background-floating: var(--background-1);
-  --background-mentioned: #22c5fd10;
-  --background-mentioned-hover: #22c5fd15;
+  --background-mentioned: #00a86b10;
+  --background-mentioned-hover: #00a86b15;
   /* modifiers */
-  --background-modifier-hover: transparent;
+  --background-modifier-hover: #00a86b40;
   --background-modifier-active: #b7c2cc;
   --background-modifier-selected: var(--accent-color);
   --background-modifier-accent: transparent;
-  --background-message-hover: transparent;
+  --background-message-hover: #00a86b1a;
   /* text */
-  --text-normal: #123354;
+  --text-normal: #444444;
   --text-positive: var(--text-normal);
   --text-muted: #8495a7;
-  --text-link: #15a6f0;
+  --text-link: var(--accent-color);
   --interactive-selected: var(--background-primary);
-  --interactive-active: var(--text-normal);
+  --interactive-active: var(--accent-color);
   --interactive-normal: var(--text-normal);
   --interactive-muted: var(--text-muted);
   --channels-default: var(--text-normal);
   --header-primary: var(--text-normal);
   --header-secondary: var(--text-muted);
   /* more */
-  --settings-icon-color: #566e86;
+  --settings-icon-color: var(--accent-color);
   --control-brand-foreground: var(--accent-color);
   --info-warning-foreground: var(--accent-color);
   --tab-selected: var(--background-1);
@@ -143,4 +134,165 @@
   --button-destructive: #fb7c7c;
   --button-destructive-hover: #ff929b;
   --button-destructive-active: #fa4a4a;
+}
+
+/*---------MY SHIT DUMBASS----------*/
+@font-face {
+	font-family: 'Google Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/fonts/GoogleSans-Regular-latinext.woff2) format('woff2');
+	unicode-range: U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+	font-family: 'Google Sans';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url(https://capnkitten.github.io/BetterDiscord/Themes/Material-Discord/files/fonts/GoogleSans-Regular-latin.woff2) format('woff2');
+	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/*---------TODAY ON FUCK AROUND AND FIND OUT WITH YOUR FRIEND POWERCORD... HEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEELP----------*/
+
+/* text selection */
+::selection {
+  background: #9a00a880;
+}
+
+/* video volume icon */
+.button-f2h6uQ>div>svg:is(.controlIcon-1grhw_) {
+  color: #c2c2c2 !important;
+}
+
+.wordmarkWindows-2dq6rw {
+  color: var(--accent-color);
+}
+
+.modeSelected-3DmyhH .icon-2W8DHg, .modeSelected-3DmyhH:hover .icon-2W8DHg {
+  color: var(--interactive-selected);
+}
+.modeSelected-3DmyhH:hover .name-28HaxV {
+  color: var(--interactive-selected);
+}
+
+.theme-light .searchFilter-2UfsDk {
+  color: var(--accent-color);
+}
+.theme-light .searchAnswer-23w-CH {
+  color: var(--text-normal);
+  background-color: transparent;
+}
+
+.newMessagesBar-1hF-9G, .active-WHsd77 {
+  background-color: var(--accent-color) !important;
+}
+.jumpToPresentBar-1cEnH0 {
+  background-color: var(--accent-color);
+}
+
+/* .bar-H6j3_Q {
+  background: linear-gradient(90deg,#c4d85e,#57d2ca, #c4d85e);
+} */
+
+.name-3Uvkvr {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.theme-light span.spinner-2RT7ZC {
+  filter:invert(1);
+}
+
+.base-3IDx3L  {
+  background-color: var(--accent-color) !important;
+}
+
+.button-f2h6uQ>div>svg:not(.clearIcon-3PdJSy) {
+  color: var(--accent-color);
+}
+
+.controlIcon-10O-4h {
+  color: var(--accent-color);
+}
+
+.topControls-23RE3h.controlSection-1mNixL>div>div>section>.toolbar-3_r2xA>.button-1fGHAH.iconWrapper-2awDjA.clickable-ZD7xvu>svg {
+  color: var(--accent-color) !important;
+}
+
+.icon-2xnN2Y {
+  color: var(--accent-color);
+}
+
+.username-h_Y3Us {
+  font-family: 'Google Sans', sans-serif;
+}
+
+.navButtonActive-1EqC5l {
+  background-color: var(--accent-color);
+}
+
+.uploadDropModal-13Kd20 .inner-rBP-MS .title-3ChJ_v {
+  color: var(--text-normal);
+}
+
+.uploadDropModal-13Kd20 .inner-rBP-MS .title-3ChJ_v strong {
+  color: var(--text-normal);
+}
+
+.uploadDropModal-13Kd20 .inner-rBP-MS .instructions-272j2A {
+  color: var(--text-normal);
+}
+
+.lookFilled-yCfaCM.colorBrand-I6CyqQ {
+  background-color: var(--accent-color) !important;
+}
+
+.contents-3ca1mk {
+  color: var(--text-normal);
+}
+
+.notice-2HEN-u {
+  background-color: var(--background-1);
+  color: var(--button-destructive);
+}
+
+.button-1iHNQ2 {
+  color: var(--button-destructive);
+}
+
+.spoilerText-27bIiA hidden-3B-Rum {
+  color: var(--text-muted);
+}
+
+.mention-3XBnnZ {
+  background-color: var(--accent-color);
+}
+
+/* User and Server Profile Buttons */
+.item-3XjbnG {
+  padding: 8px;
+  border-radius: var(--border-radius-1);
+}
+
+/* User Avatar ontop of Banner in User/Server Profiles  */
+.avatarUploader-qEFQS2 {
+  margin-top: -60px;
+}
+
+.root-g14mjS:not(.popout-3gby1q, .container-qBnZJg), .footer-31IekZ, .root-g14mjS .avatarUploaderInner-KkYu-S, .uploadModal-2ie9O_, .footer-VCsJQY, .container-18GwIk, .container-18GwIk .icon-mJhEWn, .header-1w9Q93, .popout-3gby1q, .header-145e10 .button-1_oXub, .container-nwU-8G, .container-nwU-8G .icon-2yhmi8, .modal-2TOYtq, .guildSidebar-UHnQqs, .contentWrapper-3oy4Xom, .recentMentionsPopout-2bI1ZN .scroller-145h9c, .authBox-1HR6Ha, .popout-AVsFMl, .guildPopout-G6M0fK, .footer-3YL3ds, .iconMask-1lJhcS, .container-3GP6AV, .content-18CuWF, .uploadDropModal-13Kd20, .modalHeader-1hF3w-, .modalBody-3-seO3 {
+  background-color: transparent !important;
+}
+
+.layer-2aCOJ3 {
+  margin-top: -5px;
+}
+
+.messageGroupWrapper-1jf_7C {
+  border: 1px dashed var(--accent-color);
+}
+
+.messagesPopoutWrap-3zryHW {
+  border: 1px solid var(--accent-color);
 }
